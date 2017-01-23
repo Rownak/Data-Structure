@@ -1,0 +1,7 @@
+1. Adding all folder under a repository
+
+git add --all
+git commit -am "<commit message>"
+git push
+
+
