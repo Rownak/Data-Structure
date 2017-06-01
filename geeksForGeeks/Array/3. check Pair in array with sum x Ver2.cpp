@@ -76,10 +76,10 @@ int main() {
 	    for(int j=0; j<n; j++){
 	        scanf("%d",&arr[j]);
 	    }
-//	    printf("Array Before Sort:\n");
+//	    printf(" Before Sort:\n");
 //	    printArray(arr, n);
 	    mergeSort(arr, 0, n-1);
-//	    printf("Array after Sort:\n");
+//	    printf(" after Sort:\n");
 //        printArray(arr, n);
 
         int l=0, r=n-1;
