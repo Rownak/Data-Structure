@@ -1,3 +1,9 @@
+/* 
+--Store the count of the elements in a count array where the index is the element value
+--Find the maximum count
+--if the maxCount is greater than n/2 then return the element (index number of count array)
+*/
+
 #include <stdio.h>
 
 
