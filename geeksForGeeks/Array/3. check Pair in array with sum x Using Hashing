@@ -1,0 +1,51 @@
+#include <stdio.h>
+#define MAX 100001
+
+bool hashingCheckPair(int arr[],int n, int x){
+
+    bool binMap[MAX] = {0}; /*initialize hash map as 0*/
+
+    for(int i=0; i<n; i++){
+        if(binMap[x - arr[i]] == 1 && (x - arr[i])>=0){
+              //  printf("Got it: %d %d", arr[i], x - arr[i]);
+            return 1;
+        }
+        else{
+            binMap[arr[i]] = 1;
+        }
+    }
+    return 0;
+
+}
+void printArray(int arr[], int n){
+
+    for(int i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+int main() {
+	int t=1, n=5, x=6;
+	scanf("%d",&t);
+	int i=0;
+	int arr[1000];
+	while(i<t){
+        scanf("%d %d", &n, &x);
+	    for(int j=0; j<n; j++){
+	        scanf("%d",&arr[j]);
+	    }
+//	    printf("Array Before Sort:\n");
+//	    printArray(arr, n);
+	    bool sumFound = hashingCheckPair(arr, n, x);
+//	    printf("Array after Sort:\n");
+//        printArray(arr, n);
+        if(sumFound){
+	        printf("Yes\n");
+	    }
+	    else{
+            printf("No\n");
+	    }
+	    i++;
+	}
+	return 0;
+}
