@@ -24,3 +24,4 @@ someOtherfoler/
 *.7z
 *.dmg
 *.gz
+*.ipynb_checkpoints
